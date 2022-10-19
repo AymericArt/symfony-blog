@@ -49,7 +49,7 @@ services:
   mercure:
     image: dunglas/mercure
     ports:
-      - '3000:80'
+      - '3005:80'
     environment:
       - JWT_KEY=symfonyBlogJwtToken
       - PUBLISH_ALLOWED_ORIGINS=*
