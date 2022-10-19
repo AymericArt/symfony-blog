@@ -17,18 +17,21 @@ services:
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: symfony-blog
+      MYSQL_USER: gandalf
+      MYSQL_PASSWORD: secret_test
     volumes:
       - ./tmp/db:/var/lib/mysql
 
-  db-test:
+  dbtest:
     image: mysql:5.7
     ports:
-      - '3307:3306'
+      - '3307:3307'
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: symfony-blog-test
       MYSQL_USER: gandalf
       MYSQL_PASSWORD: secret_test
+      MYSQL_TCP_PORT: 3307
     volumes:
       - ./tmp/test:/var/lib/mysql
 
