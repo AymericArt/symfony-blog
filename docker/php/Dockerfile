@@ -12,6 +12,7 @@ RUN apt-get update && apt-get install -y \
     libzip-dev \
     chromium
 
+RUN apt-get update && apt-get install -y nodejs npm
 #RUN curl -sS -o /tmp/icu.tgz -L http://download.icu-project.org/files/icu4c/62.1/icu4c-62_1-src.tgz \
 #  && tar -zxf /tmp/icu.tgz -C /tmp \
 #  && cd /tmp/icu/source \
