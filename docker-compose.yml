@@ -25,13 +25,13 @@ services:
   dbtest:
     image: mysql:5.7
     ports:
-      - '3307:3307'
+      - '3309:3309'
     environment:
       MYSQL_ROOT_PASSWORD: secret
       MYSQL_DATABASE: symfony-blog-test
       MYSQL_USER: gandalf
       MYSQL_PASSWORD: secret_test
-      MYSQL_TCP_PORT: 3307
+      MYSQL_TCP_PORT: 3309
     volumes:
       - ./tmp/test:/var/lib/mysql
 
